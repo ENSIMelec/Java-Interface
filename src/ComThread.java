@@ -29,7 +29,9 @@ public class ComThread  extends Thread {
             
 
             String str = new String(packet.getData(),0,packet.getLength()-1);
+            
 	            switch(str.charAt(0)) {
+	            case 'T': tempsTraitement(str); break;		//Temps [T tps]
 	        	case 'V': tempsTraitement(str); break;		//Vitesse [V temps vitG cmdG vitD cmdD]
 	        	case 'M': tempsTraitement(str); break;		//Commande moteur [M temps cmdG cmdD]
 	        	case 'A': tempsTraitement(str); break;		//Angle	[A temps angle angleCible]
@@ -52,10 +54,13 @@ public class ComThread  extends Thread {
 	}
 	
 	private void tempsTraitement(String str) {
+		
+		//System.out.println("Interface trp : " + str + " seconds !!!!");
+		
 		String[] data = str.split(" ");
 		//System.out.println("Point :"+data[1]);
 		if(Main.trp!=null) {
-			Main.trp.setTemps(Float.valueOf(data[1]));
+			Main.trp.setTemps(Integer.valueOf(data[1]));
 		}
 	}
 	

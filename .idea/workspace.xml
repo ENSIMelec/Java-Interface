@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../strategy_editor" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -63,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555504934048</updated>
       <workItem from="1603400458764" duration="1678000" />
+      <workItem from="1603672000086" duration="244000" />
     </task>
     <servers />
   </component>
@@ -70,10 +71,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1603400767572">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1603672252566">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603400767572" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1603672252566" />
     <state width="1323" height="175" key="GridCell.Tab.0.bottom" timestamp="1603425592793">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

@@ -13,7 +13,8 @@ import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+//import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+import java.util.Collections;
 
 public class CenterActionPanel extends JPanel{
 	JList<String> actionList;
@@ -44,6 +45,9 @@ public class CenterActionPanel extends JPanel{
 		//TODO Changer le repertoire
 		ArrayList<File> listFile = new ArrayList<File>();
 		getAllFiles(folder, listFile);
+		
+		Collections.sort(listFile);
+		
 		for(File file : listFile) {
 			actionModel.addElement(racine.toURI().relativize(file.toURI()).getPath().replaceFirst("[.][^.]+$", ""));
 		}

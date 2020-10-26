@@ -25,7 +25,7 @@ public class BottomActionPanel extends JPanel{
 	
 	ActionListener lancer = new ActionListener(){
 		   public void actionPerformed(ActionEvent e) {
-				progThread = new ProgrammeThread("sudo nohup ./action "+Main.cap.getAction() + " &");
+				progThread = new ProgrammeThread("sudo ./action "+Main.cap.getAction());
 				progThread.start();
 		   }
 	};

@@ -36,7 +36,7 @@ public class BottomShowPanel extends JPanel{
 	
 	ActionListener init = new ActionListener(){
 		   public void actionPerformed(ActionEvent e) {
-				progThread = new ProgrammeThread("sudo /home/pi/robot_asserv_lidar/action init > /dev/null 2>&1");
+				progThread = new ProgrammeThread("sudo ./action init > /dev/null 2>&1");
 				progThread.start();
 		   }
 	};

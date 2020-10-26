@@ -31,16 +31,16 @@ public class CenterRunPanel extends JPanel {
 		this.setForeground(Main.background_color);
 		this.setLayout(new BorderLayout());
 		
-		score_lbl = new JLabel("0 point");
+		score_lbl = new JLabel("0");
 		score_lbl.setForeground(new Color(45, 178, 255));
-		score_lbl.setFont(new Font("Courier", Font.BOLD,140));
+		score_lbl.setFont(new Font("Courier", Font.BOLD,300));
 		score_lbl.setHorizontalAlignment(SwingConstants.CENTER);
 		score_lbl.setVerticalAlignment(SwingConstants.CENTER);
 		this.add(score_lbl, BorderLayout.CENTER);
 		
 		//progThread = new ProgrammeThread("sudo nohup /home/pi/PreCoupeNemaFusion/main "+Main.strat+" > /dev/null 2>&1");
 		//progThread = new ProgrammeThread("/bin/sh -c 'cd /home/pi/robot_asserv_lidar && sudo nohup ./asservt " + Main.strat+"'");
-		progThread = new ProgrammeThread("sudo nohup ./asservt " + Main.strat + " &");
+		progThread = new ProgrammeThread("sudo nohup ./asservt " + Main.strat);
 		progThread.start();
 		
 	}
@@ -50,6 +50,6 @@ public class CenterRunPanel extends JPanel {
 	}
 	
 	public void setScore(int score) {
-		score_lbl.setText(score+" points");
+		score_lbl.setText(""+score);
 	}
 }

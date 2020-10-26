@@ -73,7 +73,7 @@ public class Frame extends JFrame{
 		this.setLayout(new BorderLayout());
 		this.add(new TopRunPanel(), BorderLayout.NORTH);
 		this.add(new CenterRunPanel(), BorderLayout.CENTER);
-		this.add(new BottomRunPanel(), BorderLayout.SOUTH);
+		//this.add(new BottomRunPanel(), BorderLayout.SOUTH);
 		this.revalidate();
 		this.repaint();
 	}
