@@ -13,7 +13,6 @@ public class ProgrammeThread extends Thread{
     }
 
     public void run() {
-        //String command = "/bin/bash -c 'sudo /home/pi/RobotPrincipal2018/main "+Main.strat+"'";
         try {
             System.out.println(cmd);
             prog = Runtime.getRuntime().exec(cmd);

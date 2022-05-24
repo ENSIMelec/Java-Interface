@@ -4,18 +4,18 @@ import action.CenterActionPanel;
 import temps_points.BottomRunPanel;
 import temps_points.CenterRunPanel;
 import temps_points.TopRunPanel;
+import thread.ComClient;
+import thread.ProgrammeThread;
 
-import java.awt.Color;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
+import java.awt.*;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 
 public class Main {
-    public final static int port = 1111;
     public static strat.CenterStratPanel csp;
     public static CenterActionPanel cap;
-   /* public static CenterBobbyPanel cbp;*/
+    //public static CenterBobbyPanel cbp;
     public static TopRunPanel trp;
     public static CenterRunPanel crp;
     public static BottomRunPanel brp;
@@ -26,10 +26,23 @@ public class Main {
     public static Color title_color = new Color(45, 178, 255);
     public static int fontSize = 45;
 
-    public static void main(String[] args) {
-        frame = new Frame();
-        frame.getContentPane().setBackground(background_color);
-        GraphicsDevice d = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        d.setFullScreenWindow(frame); //TODO sup commentaire
+    public static void main(String[] args) throws IOException {
+        try{
+            System.out.println("Saluuuuuuuuuuuuuuuuuuuuuuuuuuuuuuut");
+            frame = new Frame();
+            System.out.println("bwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwa");
+            frame.getContentPane().setBackground(background_color);
+            GraphicsDevice d = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            d.setFullScreenWindow(frame);
+
+            // Création du serveur FTP avec choix du port
+            ComClient client = new ComClient();
+            client.start();
+
+            System.out.println("Holla");
+        }catch(HeadlessException e){
+            System.out.println(e.getMessage());
+        }
+
     }
 }
